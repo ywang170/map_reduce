@@ -1,0 +1,58 @@
+*********************************************
+
+INSTRUCTION:
+
+Preparation:
+1.open folder "executable_file"
+2.copy "mp4.jar" and "log4j.properties" to any folder you like. For example Desktop
+3.make sure all the files you want to use for maplejuice are in the same folder as "mp4.jar" and "log4j.properties".
+4.copy the "maple.jar" and "juice.jar" to any one of the machine.(Actually you can put them in multiple machines, which won't hurt...)
+
+*for example, on each of the 4 machines, you can copy "mp4.jar" and "log4j.properties"
+to the Desktop, and make sure all the files you want to run with maplejuice are also on Desktop of 
+those 4 machines. And then copy "maple.jar" and "juice.jar" to any one of them.
+
+
+Initialize:
+
+1.choose a machine as your master, in terminal, run "java -jar mp4.jar"
+2.then you will be asked to put in your port number, please choose port number over 3000 for safety.
+3.Next you will be asked if you are the master, type "y" and then the master will be started.
+4.for other machines, first do step 1 and 2.
+5.on step 3, type "n", and then you will be asked to type in the IP and port of master.
+6.Finally you will be asked to choose your own machine number, please use number between 1 ~ 100.( Each machine should have an unique machine number and master is always machine 0)
+7.Done! Now you can run your command
+
+Run:
+
+1.on any one of the machine which has maple execution file, type in your command. For example "maple maple.jar result file1 file2 file3"
+2.Then in the master machine, several files will be generated, one for each key! For example, you may see such files like: "result_A", "result_B"... if you run the command above
+3.Then on any one of the machine which has juice execution file, type in command. For example "juice juice.jar 3 result finalOutput"
+4.Then master will sort all relative files and then run juice. For example, in master, you will find a new file "finalOutput".
+5.Eventually master will automatically send the output file to the machine you run the command. :)
+
+
+ATTENTION:
+
+1.This project can only run "jar" file, so maple and juice application must be "jar" file.
+
+2.About my maple.jar:
+This application, you can run and test it in terminal, it will take an input file and output the count of all letters in it.
+For example:
+in terminal you type in "java -jar maple.jar file1"
+you will see output in terminal like this:
+( A , 10 )
+( B , 12 )
+......
+
+3.About my juice.jar:
+This application, takes several pairs of input and put them togather.
+For example:
+in terminal you type in "java -jar juice.jar A,3 A,15 A,2"
+you will see output in terminal like this:
+(A,20)
+
+4.Because the both the output and input of maple and juice application must be in strict accordance with the form I give,
+So for testing, please use maple.jar and juice.jar that I give
+
+
